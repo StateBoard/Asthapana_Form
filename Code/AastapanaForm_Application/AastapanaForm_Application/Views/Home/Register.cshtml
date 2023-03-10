@@ -1,0 +1,78 @@
+﻿@model AastapanaForm_Application.Models.Tbl_Login
+@{
+    ViewBag.Title = "Register";
+    
+}
+
+<center><h2>Register</h2>
+    <br /><br />
+    </center>
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+   
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-lg-1">Login Type</div>
+        <div class="col-lg-2">
+            <select name="Type" id="Type" style="width:150px">
+                <option value="Type" style="text-align:center">      Login Type</option>
+                <option value="Employee">Employee</option>
+                <option value="Department">Department</option>
+                <option value="Admin">Admin</option>
+            </select>
+            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+        </div>
+        <br />
+        
+        @Html.HiddenFor(model => model.Id)
+        <div class="col-lg-1">Login ID</div>
+        <div class="col-lg-2">
+            @Html.TextBoxFor(model => model.Login_ID, new { @class = "form-control", @required = "required" })
+            @Html.ValidationMessageFor(model => model.Login_ID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <br />
+                <input type="text" name="Department" id="Department" class="form-control" value="Enter Your Department" style="display:none; color:gray; font:20px">
+            </div> <br />
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-lg-1">Password</div>
+            <div class="col-lg-2">
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-1">Confirm Password</div>
+            <div class="col-lg-2">
+                @Html.TextBoxFor(model => model.Confirm_Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Confirm_Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br /><br />
+        <center>
+            <input type="submit" value="Submit" class="btn btn-primary" id="btn_submit" />
+
+        </center>
+    </div>
+
+    }
+
+<script>
+    $("#Type").change(function () {
+
+        if ($("#Type").val() == "Employee") {
+
+            $("#Department").show()
+        }
+        else {
+            $("#Department").hide()
+        }
+
+    });
+</script>

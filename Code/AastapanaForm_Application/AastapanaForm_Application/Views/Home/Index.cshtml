@@ -1,0 +1,1209 @@
+﻿@model IEnumerable<AastapanaForm_Application.Models.SectionModel>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+
+
+<link href="~/Design1/Print.css" rel="stylesheet" />
+
+
+
+
+
+
+<form id="form1" runat="server">
+    @foreach (var item in Model)
+    {
+        <div class="book">
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <center>
+
+                        <div style=" margin-left: -105px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">शासन  निर्णय  ,सामान्य  प्रशासन  विभाग, क्रमांक  सीएफआर-1211/प्र, क्र. 257/तेरा,  दिनांक  7  फेब्रुवारी  2018  सोबतचे</div>
+                        <h4 style=" margin-left: -80px;"> परिशिष्ट – ‘अ’</h4>
+                        <div style=" margin-left: -85px;">
+                            प्रपत्र – 2<br />
+                            <div style="height: 10px; margin-left: -105px;"></div>
+                            “ गट ब ( अराजपत्रित ) आणि गट ‘क’ मधील शासकीय अधिकारी / कर्मचारी यांच्यासाठी<br />
+                            कार्यमूल्यमापन अहवाल
+                        </div>
+                        <div style="font-weight: bold; margin-left: -90px; ">
+                            Performance Appraisal Report For “ Group B (Non-Gazetted) And Group C “<br />
+                            Governnment Officers / Employees
+                        </div>
+
+
+                    </center>
+                    <div style="height:25px;"></div>
+                    <div>
+
+                        @*<span style="margin-left:100px;"></span>*@ मूल्यमापन अहवालाचा कालावधी     <span style="padding:125px;">  पासून </span>  <span style="padding:15px;">  पर्यन्त </span> <br />
+
+
+                        @*<span style="margin-left:100px;"></span>*@ Appraisal Report For The Period <span style="padding:118px;"> Form </span>  <span style="padding:18px;">  To </span>
+                        <br /><span style="margin-left:250px;">  @item.From </span> <span style="margin-left:50px;">  @item.To </span>
+                    </div>
+                    <center>
+                        <h4 style=" margin-left: -80px;">भाग – 1 ( section-1 )</h4><br />
+                        <div style="font-weight: bold; margin-left: -90px;">
+                            आस्थापना शाखेने भरावयाची माहिती To Be filled in by establishment section
+                        </div>
+                    </center>
+
+                    <div style="height:25px;"></div>
+                    <div>१. प्रतिवेदन करावयाच्या शासकीय अधिकार्‍याचे / कर्मचार्‍याचे नाव<br /> <span style="width: 50px; margin-left: 15px;"></span>   Name of the officer / Employee reported upon   <span style="margin-left:50px;">..  @item.Employee_Name  @*_____________________________________________*@</span></div>
+                    <div style="height:25px;"></div>
+                    <div>२. संवर्ग  <br /> <span style="width: 50px; margin-left: 15px;"></span>  cadre   <span style="margin-left:265px;">                                                                                  ..  @item.Cadre  @*______________________________________________*@</span></div>
+                    <div style="height:25px;"></div>
+                    <div>३. जन्म दिनांक <br /> <span style="width: 50px; margin-left: 15px;"></span>  date of birth   <span style="margin-left:235px;">                                                                     ..   @item.Date_Of_Birth  @*______________________________________________*@</span></div>
+                    <div style="height:25px;"></div>
+                    <div>४. सध्याचे पद <br /> <span style="width: 50px; margin-left: 15px;"></span>  present post   <span style="margin-left:240px;">                                                                       ..  @item.Present_Post   @*______________________________________________*@</span></div>
+                    <div style="height:25px;"></div>
+                    <div> ५. सध्याच्या पदावर नियुक्तीचा दिनांक   <br /> <span style="width: 50px; margin-left: 15px;"></span>  Date of appointment department to present post  <span style="margin-left:50px;">                 ..   @item.Appointment_Date  @*______________________________________________*@</span> </div>
+                    <div style="height:25px;"></div>
+                    <div>६. प्रशासकीय विभाग / कार्यालय<br /> <span style="width: 50px; margin-left: 15px;"></span>  Administrative department / office   <span style="margin-left:120px;">                                    ..   @item.Department  @*______________________________________________*@</span></div>
+                    <div style="height:25px;"></div>
+                    <div>७. प्रतिवेदन अधिकारी व पुनर्विलोकन अधिकारी यांचा तपशील <span style="width: 50px; margin-left: 15px;"></span> Details of reporting and reviewing officers   </div>
+                    <div class="subpage">
+                        <br />
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    नाव  Name
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पदनाम Desingnation
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    कालावधी  Periods
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ( अ) प्रतिवेदन अधिकारी<br />
+                                    Reporting officer
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    @item.ReportingOfficerName
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.ReportingOfficerDesign
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.ReportingOfficerPeriod
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ( ब )  पुनर्विलोकन अधिकारी<br />
+                                    Reviewing officer
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    @item.ReviewingOfficerName
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.ReviewingOfficerDesign
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.ReviewingOfficerPeriod
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <div style="height:25px;"></div>
+                    <div>८. प्रतिवेदन काळातील रजा आणि इतर अनुउपस्थितीचा तपशील  <span style="width: 50px; margin-left: 15px;"></span>Details of leave and absence due to other reasons during under report    </div>
+
+                    <div class="subpage">
+                        <br />
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    कालावधी Period
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    प्रकार Type
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    शेरा Remarks
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ( अ ) रजा Leave
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    @item.LeavePeriod
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.LeaveType
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.LeaveRemark
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ( बी ) इतर कारणे ( विशद करा ) जसे की , <br />विनापरवानगी गैरहजेरी/फरार
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    @item.UnAuthAbsencePeriod
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.UnAuthAbsenceType
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.UnAuthAbsenceRemark
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+                        <div style="height:25px;"></div>
+                        <div>९. प्रतिवेदन काळात घेतलेल्या प्रशिक्षणाचा तपशील   <span style="width: 50px; margin-left: 15px;"></span>Details of training undergone during period under report    </div>
+                        <br />
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:10px;font-weight:normal;padding-top:5px;">
+                                    अ . क्रं<br />
+                                    Sr . no.
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    कालावधी period<br />
+                                    पासून form    <span style="margin-left:20px;"></span>   पर्यन्त  to
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    संस्था<br />
+                                    Institute
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    विषय<br />
+                                    Subject
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    १
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    @item.TrainingFrom  @item.TrainingTo
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.TrainingInstitute
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.TrainingSubject
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    २
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    ३
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+                        <div style="height:25px;"></div>
+
+
+                        <div>
+                            ९. मागील वर्षाच्या दिनांक 31 मार्च अखेरचे वार्षिक विवरणपत्र संबंधित प्राधिकार्‍याकडे <br />सादर केल्याचा दिनांक  <span style="width: 50px; margin-left: 15px;"></span>
+                            <br />Details of training undergone during period under report<br />
+                            @item.DateOfFillingAssets
+                        </div>
+
+
+
+                        <div style="height:300px;"></div>
+
+                        ठिकाण   <span style=" margin-left: 15px;"></span>place :   <span style=" margin-left: 225px;"></span>	        आस्थापणा / संस्करण अधिकारी यांचे नाव ,पदनाम व स्वाक्षर<br />
+                        <div style="height:10px;"></div>
+                        दिनांक    <span style=" margin-left: 15px;"></span>date :     <span style=" margin-left: 232px;"></span>           Name, Designation and Signature of<br />
+                        <span style=" margin-left: 315px;"></span>               Establishment / Processing Officer
+
+                    </div>
+
+                    <div class="subpage">
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <center>
+                        <h4 style=" margin-left: -80px;">भाग – २ ( section-2 )</h4><br />
+                        <div style="font-weight: bold; margin-left: -90px;">
+                            स्वयंमूल्यननिर्धारण अहवाल Self – Appraisal Report   <br />
+                            ( ज्यांचे प्रतिवेदन व  पुनर्विलोकन  होईल त्या अधिकारी / कर्मचारी यांनी भरावयाची माहीती ) <br />
+                            (To Be filled in by officer / employee reported upon and reviewed )
+
+                        </div>
+                    </center>
+
+                    <div style="height:25px;"></div>
+                    <div>
+                        १. धारण केलेल्या पदावरून करणे अपेक्षित असलेल्या कामाचे थोडक्यात विवरण. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Brief description of task  required to be performed while holding the post ( 50 शब्द )
+                    </div><br />
+                    @item.TaskDuringPost
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        २. वार्षिक / प्रतिवेदनाच्या कलावधिकारिता नेमून दिलेल्या कामाची उद्दिष्टे ( असल्यास ). <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Allocated tasks ( if any ) for the year or period reported upon
+                    </div><br />
+                    @item.AllocatedTask
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        ३. वर्षभरात / सदर कालावधीत पार पाडलेल्या 4-5 महत्वाच्या व उल्लेखनीय कामांचे संक्षिप्त वर्णन .<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        List 4-5 important and noteworthy works done during the period ( 100 शब्दांत  )
+                    </div><br />
+                    @item.WorksInWork
+                </div>
+
+
+            </div>
+            <div>
+
+            </div>
+
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+
+
+                    <div style="height:25px;"></div>
+                    <div>
+                        ४. जी उद्दिष्टे पूर्ण होऊ शकली नाहीत,त्याकरिता आलेल्या अडचणी. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Difficulties faced in not achieving certain targets
+                    </div><br />
+                    @item.Diffi_In_Targets
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        ५. कार्यक्षमता वाढविण्याकरिता स्वत: स आवश्यक वाटते असे प्रशिक्षणाचे क्षेत्र. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Mention areas of required training which you feel necessary for higher efficieny
+                    </div><br />
+                    @item.Area_Requi_Train
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        ६.मागील वर्षाच्या दिनांक 31 मार्च अखेरचे वार्षिक मालमत्ता विवरणपत्र  .<br />
+                        संबंधित प्राधिकार्‍याकडे सादर केले आहे काय ?  ( सादर केले असल्यास दिनांक ).   <span style="width: 50px; margin-left: 205px;"></span>      होय / नाही
+                        <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Whether assets and liabilities statement of previous year , submitted <br />
+                        to concerned authority ? ( date of submission if submitted )           <span style="width: 50px; margin-left: 295px;"></span>             Yes / No
+                    </div><br />
+                    @item.Asset_Submit_Status
+
+
+                    <div style="height:250px;"></div>
+
+                    ठिकाण   <span style=" margin-left: 15px;"></span>place :   <span style=" margin-left: 225px;"></span>	        अधिकार्‍याची / कर्मचार्‍याची स्वाक्षरी,नाव व पदनाम        <br />
+                    <div style="height:10px;"></div>
+                    दिनांक    <span style=" margin-left: 15px;"></span>date :     <span style=" margin-left: 232px;"></span>           Signature, Name and Designation of  <br />
+                    <span style=" margin-left: 315px;"></span>              Officer/Employee
+                </div>
+
+
+            </div>
+
+            <div>
+
+            </div>
+
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+
+
+                    <div style="height:25px;"></div>
+                    <center>
+                        <h4 style=" margin-left: -80px;">भाग – ३ ( section-3 )</h4><br />
+                        <div style="font-weight: bold; margin-left: -90px;">
+                            प्रतिवेदन अधिकार्‍याने लिहावयाचा मूल्यमापन अहवाल    <br />
+
+                            Performance appraisal report prepared by reporting officer
+
+                        </div>
+                    </center>
+                    <div>
+                        १. भाग – 2 मध्ये नमूद करण्यात आलेल्या स्वयंमूल्यननिर्धारण   अहवालाशी आपण सहमत आहात काय ? नसल्यास,वस्तुस्थितीदर्शक अभिप्राय द्यावेत. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Whether you agree with self- assessment recorded in part – 2 ? if not, then state factual position.
+                    </div><br />
+                    @item.Agree_Self_assess
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        २. प्रतिवेदन कालावधीत पार पडलेल्या महत्वपूर्ण व उल्लेखनीय कामासंदर्भात आपले स्पष्ट अभिप्राय द्यावेत. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Officer your remarks on important and noteworthy works mentioned in self-assessment report
+                    </div><br />
+                    @item.Work_Self_assess_Report
+                    <div style="height:175px;"></div>
+
+                    <div>
+                        ३.प्रतिवेदित अधिकारी / कर्मचारी यांचे त्यांच्या कामाच्या संदर्भात लक्षणीय अपयश निदर्शनास आले असल्यास,<br /> वस्तुस्थितीदर्शक अभिप्राय द्यावेत.<br />
+
+
+                        Has the officer/ employee reported upon with significant failures is respect of his work ,<br />
+                        if yes please furnish factual details .        <span style="width: 50px; margin-left: 295px;"></span><br />
+                        @item.FailureInwork_Details
+                    </div>
+
+                    <div style="height:150px;"></div>
+
+                    <div>
+                        ४.संबंधित अधिकार्‍यांनी / कर्मचार्‍यांनी कार्यक्षमता वाढविण्याकरिता आवश्यक असलेल्या प्रशिक्षणाचे क्षेत्रास सहमत <br /> आहात  काय ?.<br />
+
+
+                        Do you with the skill up- gradation needs as identified by the officer ?<br />
+                        @item.Skill_upgra_Center
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div>
+
+            </div>
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <div style="height:25px;"></div>
+                    <div>
+                        ५.अधिकारी / कर्मचारी यांची कार्यपूर्तता,कार्यक्षमता व वैयक्तिक गुणवैशिष्ट्ये याबाबतचे गुणांकन.
+                        <span style="width: 50px; margin-left: 15px;"></span>Gradation on works completed , efficiency and personal attributes by officers / employees<br />
+                        ( 1- 10 या मर्यादित  गुणांकन देण्यात यावे . )
+                    </div>
+                    <div style="height:25px;"></div>
+
+                    <div class="subpage">
+                        <br />
+                        <div>( अ ) कार्यपूर्तता work cpmpletion ( weightage 40 % )</div>
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                    अ . क्रं<br />
+                                    Serial no .<br /><br /><br />
+                                    १<br />
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    मुद्दे           <br />
+                                    Points          <br /><br /><br />
+                                    २
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    प्रतिवेदन अधिकारी         <br />
+                                    Reporting officer        <br /><br />
+                                    ३
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन  अधिकारी     <br />
+                                    Review officer          <br /><br />
+                                    ४
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन <br />
+                                    अधिकार्‍याची स्वाक्षरी <br />
+                                    signature of review  <br />
+                                    officer<br />
+                                    ५
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    १
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    उद्दिष्टांनुसार नेमून दिलेल्या कार्याची पूर्तता<br />
+                                    Accomplishment of planned work
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Work_Reporting_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    २
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    केलेल्या कामाचा दर्जा<br />
+                                    Quality of output
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Op_Reporting_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Op_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ३
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    केलेली उल्लेखनीय /      वैशिष्ट्यपूर्ण कामे<br />
+                                    Accomplishment of exceptional work/ unforeseen tasks performed
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Accom_Reporting_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Accom_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ४
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    कार्यपूर्तता य घटकाचे सरासरी गुणांकन<br />
+                                    Average gradation on work completion
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grad_work_Reporting_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grad_work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+
+                        </table>
+                        <div style="height:25px;"></div>
+
+                        <div>( ब ) वैयक्तिक गुणवैशिष्ट्ये personal attributes ( weightage ३० % )</div>
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                    अ . क्रं<br />
+                                    Serial no .<br /><br /><br />
+                                    १<br />
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    मुद्दे           <br />
+                                    Points          <br /><br /><br />
+                                    २
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    प्रतिवेदन अधिकारी         <br />
+                                    Reporting officer        <br /><br />
+                                    ३
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन  अधिकारी     <br />
+                                    Review officer          <br /><br />
+                                    ४
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन <br />
+                                    अधिकार्‍याची स्वाक्षरी <br />
+                                    signature of review  <br />
+                                    officer<br />
+                                    ५
+
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    १
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    कामाबाबतचा दृष्टीकोण     <br />
+                                    Attitude to work
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Atti_Work_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Atti_Work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    २
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    जबाबदारीची जाणीव       <br />
+                                    Sense of responsinility
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Sence_Respo_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Sence_Respo_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    ३
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    सर्वसाधारण वर्तणूक व व्यक्तिमत्व    <br />
+                                    Overall bearing and personality
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Bearing_Person_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Bearing_Person_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    ४
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    भावनिक संतुलन  <br />
+                                    Emotional Stability
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Emotional_Stability_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Emotional_Stability_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    ५
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    संवाद कोशल्य      <br />
+                                    Communication skills
+
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Commu_Skills_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Commu_Skills_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    ६
+                                    <br />
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    विहित कालमर्यादेत काम करण्याची क्षमता      <br />
+                                    Capacity to work in time limit
+
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.CapacityOf_Work_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.CapacityOf_Work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            @*<tr>
+                                    <td style="font-weight:normal;padding-left:10px;">
+                                        <br />
+                                        7
+                                        <br />
+                                    </td>
+                                    <td style="font-weight:normal;padding-left:15px;">
+                                        वैयक्तिक गुणवैशिष्ट्ये या घटकाचे सरासरी गुणांकन     <br />
+                                        Average gradation on personal attributes
+                                    </td>
+                                    <td style="padding-left:15px;padding-top:5px;">
+                                        @item.Avg_Gradation_Person_Attri_Repo_Officer
+                                    </td>
+                                    <td style="padding-left:15px;padding-top:5px;">
+                                        @item.Avg_Gradation_Person_Attri_Review_Officer
+                                    </td>
+                                    <td style="padding-left:15px;padding-top:5px;">
+                                    </td>
+
+                                </tr>*@
+
+                        </table>
+                        <div style="height:25px;"></div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+            <div>
+
+            </div>
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <div style="height:25px;"></div>
+
+
+
+                    <div class="subpage">
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+
+                            <tr>
+                                <td style="font-weight:normal;padding-left:10px;">
+                                    <br />
+                                    7
+                                    <br />
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    वैयक्तिक गुणवैशिष्ट्ये या<br /> घटकाचे सरासरी गुणांकन    <br />
+                                    Average gradation on<br /> personal attributes
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Gradation_Person_Attri_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Gradation_Person_Attri_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                        </table>
+                        <br />
+                        <div>( क ) कार्यक्षमता efficiency ( weightage 30 % )</div>
+                        <table border="1px solid " cellspacing="0" style="width: 96%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                    अ . क्रं<br />
+                                    Serial no .<br /><br /><br />
+                                    १<br />
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    मुद्दे           <br />
+                                    Points          <br /><br /><br />
+                                    २
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    प्रतिवेदन अधिकारी         <br />
+                                    Reporting officer        <br /><br />
+                                    ३
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन  अधिकारी     <br />
+                                    Review officer          <br /><br />
+                                    ४
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    पुनर्विलोकन <br />
+                                    अधिकार्‍याची स्वाक्षरी <br />
+                                    signature of review  <br />
+                                    officer<br />
+                                    ५
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    १
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    संबंधित कायदे, नियम व प्रचलित कार्यपद्धती माहिती तंत्रज्ञान          <br />
+                                    आणि संबंधित क्षेत्रातील स्थानिक पद्धती याबबतचे ज्ञान.
+                                    Knowledge of relevant acts / rules / procedures             <br />
+                                    / it skill and awareness of local norms in the          <br />
+                                    relevant area
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Knowldge_Skill_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Knowldge_Skill_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    २
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    कौशल्यपूर्ण नियोजनाची  क्षमता      <br />
+                                    Strategic planning ability
+
+
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Strategic_Planning_Ability_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Strategic_Planning_Ability_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ३
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    स्वत: निर्णय घेऊन काम करण्याची क्षमता  <br />
+                                    Decision making ability
+
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Decision_Ability_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Decision_Ability_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ४
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    कार्यपूर्तता य घटकाचे सरासरी गुणांकन <br />
+                                    Average gradation on work completion
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grad_work_Reporting_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grad_work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ५
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    आपल्या कामाशी संबंध येणार्‍या इतर शासकीय  <br />
+                                    यंत्रणेशी समन्वय साधण्याची क्षमता. <br />
+                                    Ability to co- ordinate with other government <br />
+                                    agencies in relation to work
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Decision_Ability_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Decision_Ability_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    ६
+
+                                </td>
+                                <td style="font-weight:normal;padding-left:15px;">
+                                    कार्यक्षमता या घटकाचे सरासरी गुणांकन  <br />
+                                    Average gradation of work efficiency
+
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grade_Work_Effi_Repo_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                    @item.Avg_Grad_work_Review_Officer
+                                </td>
+                                <td style="padding-left:15px;padding-top:5px;">
+                                </td>
+
+
+
+                            </tr>
+
+                        </table>
+                        <div style="height:20px;"></div>
+                        <div>
+                            ६. संबंधित अधिकारी /कर्मचार्‍याच्या सचोटी व चारित्र्याबाबत आपले स्वयंस्पष्ट अभिप्राय द्यावेत. ( प्रतिकूल अभिप्राय असल्यास , सोबत
+                            <br /><span style="width: 50px; margin-left: 15px;"></span>त्याबाबतची उदाहरणे नमूद करावीत.)<br />
+                            <span style="width: 50px; margin-left: 15px;"></span>
+                            Offer your remarks on character and integrity ( if remarks are negative , then mention instances )
+
+                        </div>
+                        <br /> @item.Remark_Character_Integrity
+                        <div style="height:15px;"></div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div></div>
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+                    <div style="height:35px;"></div>
+                    <div>
+                        ७.  अधिकारी/ कर्मचार्री यांचे एकंदरीत मूल्यमापन ( जास्तीत जास्त 100 शब्द )<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Overall assessment of officer / employee ( maximum 100 words )<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Include strengths and lesser strengths and his attitude towards disabled persons , women अँड backward क्लाससेस.
+                    </div>
+                    @item.Overall_Assessment_Officer
+                    <div style="height:280px;"></div>
+                    <div>
+                        ८.  प्रकृतिमान state of health<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        ( उत्कृष्ट / चांगले / चांगले नाही ) ( very good / good / not good )
+
+
+                    </div>
+                    @item.State_of_Mind
+                    <div style="height:100px;"></div>
+                    <div>
+                        ९. एकंदरीत गुणांकन. Overall gradation
+                    </div>
+                    @item.Overall_Graduation
+                    <div style="height:300px;"></div>
+
+                    ठिकाण   <span style=" margin-left: 15px;"></span>place :   <span style=" margin-left: 225px;"></span>	        प्रतिवेदन अधिकार्‍यची सही, नाव व पदनाम       <br />
+                    <div style="height:10px;"></div>
+                    दिनांक    <span style=" margin-left: 15px;"></span>date :     <span style=" margin-left: 232px;"></span>           Signature, Name and Designation of  <br />
+                    <span style=" margin-left: 315px;"></span>              Reporting Officer
+
+                    <div style="height:25px;"></div>
+
+
+
+                </div>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+
+
+                    <div style="height:25px;"></div>
+                    <center>
+                        <h4 style=" margin-left: -80px;">भाग – ४ ( section – 4 ) </h4><br />
+                        <div style=" margin-left: -80px;">पुनर्विलोकन  Review </div><br />
+                        <div style="font-weight: bold; margin-left: -90px;">
+                            पुनर्विलोकन  अधिकार्‍याचे  अभिप्राय remarks of Reviewing officer
+                        </div>
+
+                    </center>
+                    <div style="height:25px;"></div>
+                    <div>
+                        १.आपण प्रतिवेदन अधिकार्‍याने, संबंधित अधिकारी /कर्मचार्‍याच्या कार्यपूर्तता, कार्यक्षमता, वैयक्तिक गुणवैशिष्ट्ये यासंबंधाने  <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        भाग – 3 मधील मुद्यांच्या साह्याने केलेल्या मूल्यनिर्धारणाशी सहमत आहात काय ?<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Do you agree with assessment of reporting officer on work don, efficiency ,personal attributes in<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        part – 3 concerned officer / employee ?
+                    </div>
+                    @item.Agree_assessment_sect3
+                    <div style="height:25px;"></div>
+                    <center>
+                        <table border="1px solid " cellspacing="0" style="width: 25%">
+                            <tr>
+                                <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                    होय ( yes )
+                                </td>
+                                <td style="padding-left:5px;padding-top:5px;">
+                                    नाही ( no )
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <div style="height:100px;"></div>
+                    <div>
+                        २. सहमत नसल्यास,तपशील व कारने द्यावीत. <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        In case of difference of opiनिon details and reasons for the same may be given .
+                    </div>
+                    @item.Diff_opinion
+                    <div style="height:200px;"></div>
+
+                    <div>
+                        ३.अधिकारी/ कर्मचार्री यांचे एकंदरीत मूल्यमापन ( जास्तीत जास्त 100 शब्द )<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        Overall assessment of officer / employee ( maximum 100 words )<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        यामध्ये संबंधित अधिकारी / कर्मचार्‍यांची बलस्थाने , उणिवा  आणि दिव्यांग व्यक्ति , महिला व मागासवर्गीयांबाबतचा<br /><span style="width: 50px; margin-left: 15px;"></span>
+                        दृश्ठिकोण यांचा समावेश असावा.
+
+                        Include strengths and lesser strengths and his attitude towards disabled persons , <br /><span style="width: 50px; margin-left: 15px;"></span>
+                        women and backward classes.
+                    </div>
+                    @item.Overall_assessment_officerFourSec
+                    <div style="height:150px;"></div>
+
+                    <div>
+                        एकंदरीत गुणांकन Overall gradation<br />
+                        ( 1- 10 या मर्यादित गुणांकन देण्यात यावे . )
+
+                    </div>
+                    @item.Overall_graduationFourSec
+                    <div style="height:100px;"></div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <div class="page">
+                <div class="container" style="margin-left:65px;">
+
+
+                    <div style="height:100px;"></div>
+
+                    ठिकाण   <span style=" margin-left: 15px;"></span>place :   <span style=" margin-left: 225px;"></span>	       पुनर्विलोकन अधिकार्‍यची सही, नाव व पदनाम      <br />
+                    <div style="height:10px;"></div>
+                    दिनांक    <span style=" margin-left: 15px;"></span>date :     <span style=" margin-left: 232px;"></span>           Signature, Name and Designation of  <br />
+                    <span style=" margin-left: 315px;"></span>              Reviewing Officer
+
+                    <div style="height:100px;"></div>
+
+                    <table border="1px solid " cellspacing="0" style="width: 96%">
+                        <tr>
+                            <td style="padding-left:15px;font-weight:normal;padding-top:5px;">
+                                गोपनीय अहवालची छायांकित प्रत समक्ष मिळाली,
+                                <br />
+                                <br /><br />
+                                संबंधित अधिकारी / कर्मचारी यांचे नाव व दीनांकित स्वाक्षरी
+                            </td>
+                            <td style="padding-left: 5px; font-weight: normal; padding-top: 5px;">
+                                गोपनीय अहवालची छायांकित प्रत संबंधित अधिकारी /<br />
+                                कर्मचारी यांना डाकेने पाठविल्यास<br />
+                                पत्र क्रमांक :<br />
+                                दिनांक :<br />
+                                संस्करण अधिकारी यांचे नाव , पदनाम व स्वाक्षरी
+                                <br /><br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+
+        <center>
+
+            
+
+
+
+            <br /><br /><br />
+            <input type="button" id="Edit" class="btn btn-primary" onclick="EditSection1(@item.Id)" value="Edit" />
+
+            <input type="button" id="Submit_To_HOD" class="btn btn-primary" value="Submit" />
+            <br /><br />
+        </center>
+    }
+
+
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+<script>
+   
+
+    function EditSection1(ID) {
+        debugger
+        $.ajax({
+            type: "GET",
+            url: '/Section/GetSectionData',
+            datatype: 'json',
+            data: {
+                ID: ID
+            },
+            success: function (data) {
+                if (data.Result) {
+                    $('#Id          '    ). val(ID                          );
+                    $('#Year        '    ).val(data.Response. Year           );
+                    $('#Month       '    ).val(data.Response. Month          );
+                    $('#IPAddress   '    ).val(data.Response. IPAddress      );
+                    $('#FileName    '    ).val(data.Response. FileName       );
+                    $('#DateTime    '    ).val(data.Response. DateTime       );
+                    $('#PdfUrl      '    ).attr(data.Response.PdfUrl        );
+                    $('#Image       '    ).attr(data.Response.Image         );
+                }
+                else {
+                    BindProdTable();
+                    alert(data.Response);
+                }
+            },
+
+        });
+    }
+
+    
+
+</script>
+

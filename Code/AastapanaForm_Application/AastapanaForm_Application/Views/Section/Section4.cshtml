@@ -1,0 +1,165 @@
+﻿@model AastapanaForm_Application.Models.Tbl_Section4
+@{
+    ViewBag.Title = "Section4";
+    Layout = "~/Views/Shared/DashBoard_Layout.cshtml";
+}
+
+<form id="submit_form">
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 4
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+        <br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    पुनर्विलोकन  अधिकार्‍याचे  अभिप्राय remarks of reviewing officer
+                </div>
+            </li>
+        </ul>
+        <div class="panel panel-default">
+            <br /><br />
+                  <div class="row">
+                      <div class="col-md-1"></div>
+                      <div class="col-lg-5">
+
+                          1)  आपण प्रतिवेदन अधिकार्‍याने, संबंधित अधिकारी /कर्मचार्‍याच्या कार्यपूर्तता, कार्यक्षमता, वैयक्तिक गुणवैशिष्ट्ये यासंबंधाने भाग – 3 मधील मुद्यांच्या साह्याने केलेल्या मूल्यनिर्धारणाशी सहमत आहात काय ?
+                          Do you agree with assessment of reporting officer on work don, efficiency ,personal attributes in part – 3 concerned officer / employee ?
+                          yes / no
+
+                      </div>
+                      @Html.HiddenFor(model => model.Id)
+                      <div class="col-sm-3">
+                          <div class="form-group">
+                              <div>
+                                  <label class="radio-inline">
+                                      @Html.RadioButtonFor(model => model.Agree_assessment_sect3, "Yes", new { @id = "Yes" }) Yes
+                                  </label>
+                                  <label class="radio-inline">
+                                      @Html.RadioButtonFor(model => model.Agree_assessment_sect3, "No", new { @id = "No" }) No
+                                  </label>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        2) सहमत नसल्यास,तपशील व कारने द्यावीत.<br />
+                        In case of difference of opiनिon details and reasons for the same may be given
+
+                        :
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Diff_opinion, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Diff_opinion, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            @*<div class="col-md-1"></div>*@
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        2) वार्षिक / प्रतिवेदनाच्या कलावधिकारिता नेमून दिलेल्या कामाची उद्दिष्टे ( असल्यास ).<br />
+                        Allocated tasks ( if any ) for the year or period reported upon
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Overall_assessment_officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Overall_assessment_officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        3) अधिकारी/ कर्मचार्री यांचे एकंदरीत मूल्यमापन ( जास्तीत जास्त 100 शब्द )
+                        यामध्ये संबंधित अधिकारी / कर्मचार्‍यांची बलस्थाने , उणिवा  आणि दिव्यांग व्यक्ति , महिला व मागासवर्गीयांबाबतचा दृश्ठिकोण यांचा समावेश असावा.
+                        Overall assessment of officer / employee ( maximum 100 words )
+                        Include strengths and lesser strengths and his attitude towards disabled persons , women अँड backward क्लाससेस.
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Overall_assessment_officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Overall_assessment_officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        4) एकंदरीत गुणांकन
+                        ( 1- 10 या मर्यादित गुणांकन देण्यात यावे . )
+                        Overall gradation
+                    </span>
+                </div>
+                <div class="col-lg-5">
+                    @Html.DropDownListFor(model => model.Overall_graduation, new List<SelectListItem>
+                           {
+                           new SelectListItem { Text = "1 ", Value = "1"},
+                           new SelectListItem { Text = "2 ", Value = "2"},
+                           new SelectListItem { Text = "3", Value = "3"},
+                           new SelectListItem { Text ="4", Value ="4"},
+                           new SelectListItem { Text = "5", Value = "5"},
+                            new SelectListItem { Text = " 6 ", Value = " 6 "},
+                           new SelectListItem { Text = "  7 ", Value = " 7 "},
+                           new SelectListItem { Text = "  8 ", Value = " 8 "},
+                           new SelectListItem { Text ="   9 ", Value ="  9 "},
+                           new SelectListItem { Text = "  10 ", Value = " 10 "},
+
+                          }, "-Select Overall Gradation -", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+
+                </div>
+            </div>
+            <br />
+            <br /><br /><br />
+            <center>
+                <input type="button" id="submit_btn" class="btn btn-block btn-primary btn-lg font-weight-bolder auth-form-btn" value="SUBMIT" style="background-color: #3eadcf;font-weight:bold; width:15%">
+            </center>
+        </div>
+
+    </div>
+    
+
+</form>
+
+<script>
+    $(document).ready(function () {
+       
+        $("#submit_btn").click(function (e) {
+
+            e.preventDefault();
+            var formdata = new FormData($(submit_form)[0]);
+            $.ajax({
+                url: 'Section4',
+                type: 'Post',
+                datatype: 'json',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function (Data) {
+                    debugger
+                    if (Data.result) {
+                        alert(Data.Response);
+                    }
+
+
+                },
+            });
+        });
+
+    });
+</script>

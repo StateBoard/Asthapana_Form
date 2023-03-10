@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_AsthapanaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Confirm_Password" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tbl_Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="Employee_Name" Type="nvarchar(max)" />
+    <Property Name="Cadre" Type="nvarchar(max)" />
+    <Property Name="Date_Of_Birth" Type="nvarchar(max)" />
+    <Property Name="Present_Post" Type="nvarchar(max)" />
+    <Property Name="Appointment_Date" Type="date" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerName" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerDesign" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerPeriod" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerName" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerDesign" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerPeriod" Type="nvarchar(max)" />
+    <Property Name="LeavePeriod" Type="nvarchar(max)" />
+    <Property Name="LeaveType" Type="nvarchar(max)" />
+    <Property Name="LeaveRemark" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsencePeriod" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsenceType" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsenceRemark" Type="nvarchar(max)" />
+    <Property Name="TrainingFrom" Type="date" />
+    <Property Name="TrainingTo" Type="date" />
+    <Property Name="TrainingInstitute" Type="nvarchar(max)" />
+    <Property Name="TrainingSubject" Type="nvarchar(max)" />
+    <Property Name="DateOfFillingAssets" Type="date" />
+    <Property Name="From" Type="date" />
+    <Property Name="To" Type="date" />
+    <Property Name="TaskDuringPost" Type="nvarchar(max)" />
+    <Property Name="AllocatedTask" Type="nvarchar(max)" />
+    <Property Name="WorksInWork" Type="nvarchar(max)" />
+    <Property Name="Diffi_In_Targets" Type="nvarchar(max)" />
+    <Property Name="Area_Requi_Train" Type="nvarchar(max)" />
+    <Property Name="Asset_Submit_Status" Type="nvarchar(max)" />
+    <Property Name="Agree_Self_assess" Type="nvarchar(max)" />
+    <Property Name="Work_Self_assess_Report" Type="nvarchar(max)" />
+    <Property Name="FailureInwork_Details" Type="nvarchar(max)" />
+    <Property Name="Skill_upgra_Center" Type="nvarchar(max)" />
+    <Property Name="Rating_On_Efficiency" Type="nvarchar(max)" />
+    <Property Name="Work_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Op_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Accom_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grad_work_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Op_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Accom_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grad_work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Atti_Work_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Sence_Respo_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Bearing_Person_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Emotional_Stability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Commu_Skills_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="CapacityOf_Work_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Gradation_Person_Attri_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Atti_Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Sence_Respo_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Bearing_Person_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Emotional_Stability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Commu_Skills_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="CapacityOf_Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Gradation_Person_Attri_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Knowldge_Skill_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Strategic_Planning_Ability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Decision_Ability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Initiative_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Co-Ordinate_Agencies_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grade_Work_Effi_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Knowldge_Skill_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Strategic_Planning_Ability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Decision_Ability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Initiative_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Co-Ordinate_Agencies_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grade_Work_Effi_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Remark_Character_Integrity" Type="nvarchar(max)" />
+    <Property Name="Overall_Assessment_Officer" Type="nvarchar(max)" />
+    <Property Name="Strength_atti_to_abnormal_person" Type="nvarchar(max)" />
+    <Property Name="State_of_Mind" Type="nvarchar(max)" />
+    <Property Name="Overall_Graduation" Type="nvarchar(max)" />
+    <Property Name="Agree_assessment_sect3" Type="nvarchar(max)" />
+    <Property Name="Diff_opinion" Type="nvarchar(max)" />
+    <Property Name="Overall_assessment_officerFourSec" Type="nvarchar(max)" />
+    <Property Name="Overall_graduationFourSec" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tbl_Section1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="Employee_Name" Type="nvarchar(max)" />
+    <Property Name="Cadre" Type="nvarchar(max)" />
+    <Property Name="Date_Of_Birth" Type="nvarchar(max)" />
+    <Property Name="Present_Post" Type="nvarchar(max)" />
+    <Property Name="Appointment_Date" Type="date" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerName" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerDesign" Type="nvarchar(max)" />
+    <Property Name="ReportingOfficerPeriod" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerName" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerDesign" Type="nvarchar(max)" />
+    <Property Name="ReviewingOfficerPeriod" Type="nvarchar(max)" />
+    <Property Name="LeavePeriod" Type="nvarchar(max)" />
+    <Property Name="LeaveType" Type="nvarchar(max)" />
+    <Property Name="LeaveRemark" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsencePeriod" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsenceType" Type="nvarchar(max)" />
+    <Property Name="UnAuthAbsenceRemark" Type="nvarchar(max)" />
+    <Property Name="TrainingFrom" Type="date" />
+    <Property Name="TrainingTo" Type="date" />
+    <Property Name="TrainingInstitute" Type="nvarchar(max)" />
+    <Property Name="TrainingSubject" Type="nvarchar(max)" />
+    <Property Name="DateOfFillingAssets" Type="date" />
+    <Property Name="From" Type="date" />
+    <Property Name="To" Type="date" />
+  </EntityType>
+  <EntityType Name="Tbl_Section2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="TaskDuringPost" Type="nvarchar(max)" />
+    <Property Name="AllocatedTask" Type="nvarchar(max)" />
+    <Property Name="WorksInWork" Type="nvarchar(max)" />
+    <Property Name="Diffi_In_Targets" Type="nvarchar(max)" />
+    <Property Name="Area_Requi_Train" Type="nvarchar(max)" />
+    <Property Name="Asset_Submit_Status" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tbl_Section3">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="Agree_Self_assess" Type="nvarchar(max)" />
+    <Property Name="Work_Self_assess_Report" Type="nvarchar(max)" />
+    <Property Name="FailureInwork_Details" Type="nvarchar(max)" />
+    <Property Name="Skill_upgra_Center" Type="nvarchar(max)" />
+    <Property Name="Rating_On_Efficiency" Type="nvarchar(max)" />
+    <Property Name="Work_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Op_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Accom_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grad_work_Reporting_Officer" Type="nvarchar(max)" />
+    <Property Name="Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Op_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Accom_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grad_work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Atti_Work_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Sence_Respo_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Bearing_Person_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Emotional_Stability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Commu_Skills_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="CapacityOf_Work_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Gradation_Person_Attri_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Atti_Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Sence_Respo_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Bearing_Person_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Emotional_Stability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Commu_Skills_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="CapacityOf_Work_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Gradation_Person_Attri_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Knowldge_Skill_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Strategic_Planning_Ability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Decision_Ability_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Initiative_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Co-Ordinate_Agencies_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grade_Work_Effi_Repo_Officer" Type="nvarchar(max)" />
+    <Property Name="Knowldge_Skill_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Strategic_Planning_Ability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Decision_Ability_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Initiative_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Co-Ordinate_Agencies_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Avg_Grade_Work_Effi_Review_Officer" Type="nvarchar(max)" />
+    <Property Name="Remark_Character_Integrity" Type="nvarchar(max)" />
+    <Property Name="Overall_Assessment_Officer" Type="nvarchar(max)" />
+    <Property Name="Strength_atti_to_abnormal_person" Type="nvarchar(max)" />
+    <Property Name="State_of_Mind" Type="nvarchar(max)" />
+    <Property Name="Overall_Graduation" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tbl_Section4">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login_ID" Type="nvarchar(max)" />
+    <Property Name="Agree_assessment_sect3" Type="nvarchar(max)" />
+    <Property Name="Diff_opinion" Type="nvarchar(max)" />
+    <Property Name="Overall_assessment_officer" Type="nvarchar(max)" />
+    <Property Name="Overall_graduation" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Db_AsthapanaModelStoreContainer">
+    <EntitySet Name="Tbl_Login" EntityType="Self.Tbl_Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Section" EntityType="Self.Tbl_Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Section1" EntityType="Self.Tbl_Section1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Section2" EntityType="Self.Tbl_Section2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Section3" EntityType="Self.Tbl_Section3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Section4" EntityType="Self.Tbl_Section4" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

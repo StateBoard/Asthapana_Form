@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_AsthapanaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db_AsthapanaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_Section1" EntityType="Db_AsthapanaModel.Tbl_Section1" />
+    <EntitySet Name="Tbl_Section2" EntityType="Db_AsthapanaModel.Tbl_Section2" />
+    <EntitySet Name="Tbl_Section3" EntityType="Db_AsthapanaModel.Tbl_Section3" />
+    <EntitySet Name="Tbl_Section4" EntityType="Db_AsthapanaModel.Tbl_Section4" />
+    <EntitySet Name="Tbl_Login" EntityType="Db_AsthapanaModel.Tbl_Login" />
+    <EntitySet Name="Tbl_Section" EntityType="Db_AsthapanaModel.Tbl_Section" />
+  </EntityContainer>
+  <EntityType Name="Tbl_Section1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cadre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Appointment_Date" Type="DateTime" Precision="0" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerDesign" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="From" Type="DateTime" Precision="0" />
+    <Property Name="To" Type="DateTime" Precision="0" />
+    <Property Name="ReviewingOfficerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReviewingOfficerDesign" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReviewingOfficerPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeavePeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsencePeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsenceType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsenceRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrainingFrom" Type="DateTime" Precision="0" />
+    <Property Name="TrainingTo" Type="DateTime" Precision="0" />
+    <Property Name="TrainingInstitute" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrainingSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfFillingAssets" Type="DateTime" Precision="0" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Section2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskDuringPost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AllocatedTask" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorksInWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Diffi_In_Targets" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Area_Requi_Train" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Asset_Submit_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Section3">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Agree_Self_assess" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Self_assess_Report" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FailureInwork_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Skill_upgra_Center" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rating_On_Efficiency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Op_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Accom_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grad_work_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Op_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Accom_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grad_work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Atti_Work_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sence_Respo_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bearing_Person_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Emotional_Stability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Commu_Skills_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CapacityOf_Work_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Gradation_Person_Attri_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Atti_Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sence_Respo_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bearing_Person_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Emotional_Stability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Commu_Skills_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CapacityOf_Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Gradation_Person_Attri_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Knowldge_Skill_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strategic_Planning_Ability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Decision_Ability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Initiative_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Co_Ordinate_Agencies_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grade_Work_Effi_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Knowldge_Skill_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strategic_Planning_Ability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Decision_Ability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Initiative_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Co_Ordinate_Agencies_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grade_Work_Effi_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark_Character_Integrity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_Assessment_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strength_atti_to_abnormal_person" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State_of_Mind" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_Graduation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Section4">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Agree_assessment_sect3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Diff_opinion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_assessment_officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_graduation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Confirm_Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cadre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Appointment_Date" Type="DateTime" Precision="0" />
+    <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerDesign" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingOfficerPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReviewingOfficerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReviewingOfficerDesign" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReviewingOfficerPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeavePeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LeaveRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsencePeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsenceType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnAuthAbsenceRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrainingFrom" Type="DateTime" Precision="0" />
+    <Property Name="TrainingTo" Type="DateTime" Precision="0" />
+    <Property Name="TrainingInstitute" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrainingSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfFillingAssets" Type="DateTime" Precision="0" />
+    <Property Name="From" Type="DateTime" Precision="0" />
+    <Property Name="To" Type="DateTime" Precision="0" />
+    <Property Name="TaskDuringPost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AllocatedTask" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorksInWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Diffi_In_Targets" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Area_Requi_Train" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Asset_Submit_Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Agree_Self_assess" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Self_assess_Report" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FailureInwork_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Skill_upgra_Center" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Rating_On_Efficiency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Op_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Accom_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grad_work_Reporting_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Op_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Accom_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grad_work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Atti_Work_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sence_Respo_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bearing_Person_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Emotional_Stability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Commu_Skills_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CapacityOf_Work_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Gradation_Person_Attri_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Atti_Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sence_Respo_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bearing_Person_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Emotional_Stability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Commu_Skills_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CapacityOf_Work_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Gradation_Person_Attri_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Knowldge_Skill_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strategic_Planning_Ability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Decision_Ability_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Initiative_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Co_Ordinate_Agencies_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grade_Work_Effi_Repo_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Knowldge_Skill_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strategic_Planning_Ability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Decision_Ability_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Initiative_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Co_Ordinate_Agencies_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Avg_Grade_Work_Effi_Review_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark_Character_Integrity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_Assessment_Officer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Strength_atti_to_abnormal_person" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State_of_Mind" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_Graduation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Agree_assessment_sect3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Diff_opinion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_assessment_officerFourSec" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Overall_graduationFourSec" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

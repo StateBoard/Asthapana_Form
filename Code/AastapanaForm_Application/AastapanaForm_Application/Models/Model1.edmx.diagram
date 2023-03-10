@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="def822230b1e4306af125a8b7607e13d" Name="Diagram1">
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Section1" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Section2" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Section3" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Section4" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Login" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Db_AsthapanaModel.Tbl_Section" Width="1.5" PointX="0.75" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Db_AsthapanaModelStoreContainer" CdmEntityContainer="Db_AsthapanaEntities">
+    <EntitySetMapping Name="Tbl_Section1">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Section1">
+        <MappingFragment StoreEntitySet="Tbl_Section1">
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="DateOfFillingAssets" ColumnName="DateOfFillingAssets" />
+          <ScalarProperty Name="TrainingSubject" ColumnName="TrainingSubject" />
+          <ScalarProperty Name="TrainingInstitute" ColumnName="TrainingInstitute" />
+          <ScalarProperty Name="TrainingTo" ColumnName="TrainingTo" />
+          <ScalarProperty Name="TrainingFrom" ColumnName="TrainingFrom" />
+          <ScalarProperty Name="UnAuthAbsenceRemark" ColumnName="UnAuthAbsenceRemark" />
+          <ScalarProperty Name="UnAuthAbsenceType" ColumnName="UnAuthAbsenceType" />
+          <ScalarProperty Name="UnAuthAbsencePeriod" ColumnName="UnAuthAbsencePeriod" />
+          <ScalarProperty Name="LeaveRemark" ColumnName="LeaveRemark" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="LeavePeriod" ColumnName="LeavePeriod" />
+          <ScalarProperty Name="ReviewingOfficerPeriod" ColumnName="ReviewingOfficerPeriod" />
+          <ScalarProperty Name="ReviewingOfficerDesign" ColumnName="ReviewingOfficerDesign" />
+          <ScalarProperty Name="ReviewingOfficerName" ColumnName="ReviewingOfficerName" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="ReportingOfficerPeriod" ColumnName="ReportingOfficerPeriod" />
+          <ScalarProperty Name="ReportingOfficerDesign" ColumnName="ReportingOfficerDesign" />
+          <ScalarProperty Name="ReportingOfficerName" ColumnName="ReportingOfficerName" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Appointment_Date" ColumnName="Appointment_Date" />
+          <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+          <ScalarProperty Name="Date_Of_Birth" ColumnName="Date_Of_Birth" />
+          <ScalarProperty Name="Cadre" ColumnName="Cadre" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Section2">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Section2">
+        <MappingFragment StoreEntitySet="Tbl_Section2">
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Asset_Submit_Status" ColumnName="Asset_Submit_Status" />
+          <ScalarProperty Name="Area_Requi_Train" ColumnName="Area_Requi_Train" />
+          <ScalarProperty Name="Diffi_In_Targets" ColumnName="Diffi_In_Targets" />
+          <ScalarProperty Name="WorksInWork" ColumnName="WorksInWork" />
+          <ScalarProperty Name="AllocatedTask" ColumnName="AllocatedTask" />
+          <ScalarProperty Name="TaskDuringPost" ColumnName="TaskDuringPost" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Section3">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Section3">
+        <MappingFragment StoreEntitySet="Tbl_Section3">
+          <ScalarProperty Name="Overall_Graduation" ColumnName="Overall_Graduation" />
+          <ScalarProperty Name="State_of_Mind" ColumnName="State_of_Mind" />
+          <ScalarProperty Name="Strength_atti_to_abnormal_person" ColumnName="Strength_atti_to_abnormal_person" />
+          <ScalarProperty Name="Overall_Assessment_Officer" ColumnName="Overall_Assessment_Officer" />
+          <ScalarProperty Name="Remark_Character_Integrity" ColumnName="Remark_Character_Integrity" />
+          <ScalarProperty Name="Avg_Grade_Work_Effi_Review_Officer" ColumnName="Avg_Grade_Work_Effi_Review_Officer" />
+          <ScalarProperty Name="Co_Ordinate_Agencies_Review_Officer" ColumnName="Co-Ordinate_Agencies_Review_Officer" />
+          <ScalarProperty Name="Initiative_Review_Officer" ColumnName="Initiative_Review_Officer" />
+          <ScalarProperty Name="Decision_Ability_Review_Officer" ColumnName="Decision_Ability_Review_Officer" />
+          <ScalarProperty Name="Strategic_Planning_Ability_Review_Officer" ColumnName="Strategic_Planning_Ability_Review_Officer" />
+          <ScalarProperty Name="Knowldge_Skill_Review_Officer" ColumnName="Knowldge_Skill_Review_Officer" />
+          <ScalarProperty Name="Avg_Grade_Work_Effi_Repo_Officer" ColumnName="Avg_Grade_Work_Effi_Repo_Officer" />
+          <ScalarProperty Name="Co_Ordinate_Agencies_Repo_Officer" ColumnName="Co-Ordinate_Agencies_Repo_Officer" />
+          <ScalarProperty Name="Initiative_Repo_Officer" ColumnName="Initiative_Repo_Officer" />
+          <ScalarProperty Name="Decision_Ability_Repo_Officer" ColumnName="Decision_Ability_Repo_Officer" />
+          <ScalarProperty Name="Strategic_Planning_Ability_Repo_Officer" ColumnName="Strategic_Planning_Ability_Repo_Officer" />
+          <ScalarProperty Name="Knowldge_Skill_Repo_Officer" ColumnName="Knowldge_Skill_Repo_Officer" />
+          <ScalarProperty Name="Avg_Gradation_Person_Attri_Review_Officer" ColumnName="Avg_Gradation_Person_Attri_Review_Officer" />
+          <ScalarProperty Name="CapacityOf_Work_Review_Officer" ColumnName="CapacityOf_Work_Review_Officer" />
+          <ScalarProperty Name="Commu_Skills_Review_Officer" ColumnName="Commu_Skills_Review_Officer" />
+          <ScalarProperty Name="Emotional_Stability_Review_Officer" ColumnName="Emotional_Stability_Review_Officer" />
+          <ScalarProperty Name="Bearing_Person_Review_Officer" ColumnName="Bearing_Person_Review_Officer" />
+          <ScalarProperty Name="Sence_Respo_Review_Officer" ColumnName="Sence_Respo_Review_Officer" />
+          <ScalarProperty Name="Atti_Work_Review_Officer" ColumnName="Atti_Work_Review_Officer" />
+          <ScalarProperty Name="Avg_Gradation_Person_Attri_Repo_Officer" ColumnName="Avg_Gradation_Person_Attri_Repo_Officer" />
+          <ScalarProperty Name="CapacityOf_Work_Repo_Officer" ColumnName="CapacityOf_Work_Repo_Officer" />
+          <ScalarProperty Name="Commu_Skills_Repo_Officer" ColumnName="Commu_Skills_Repo_Officer" />
+          <ScalarProperty Name="Emotional_Stability_Repo_Officer" ColumnName="Emotional_Stability_Repo_Officer" />
+          <ScalarProperty Name="Bearing_Person_Repo_Officer" ColumnName="Bearing_Person_Repo_Officer" />
+          <ScalarProperty Name="Sence_Respo_Repo_Officer" ColumnName="Sence_Respo_Repo_Officer" />
+          <ScalarProperty Name="Atti_Work_Repo_Officer" ColumnName="Atti_Work_Repo_Officer" />
+          <ScalarProperty Name="Avg_Grad_work_Review_Officer" ColumnName="Avg_Grad_work_Review_Officer" />
+          <ScalarProperty Name="Accom_Review_Officer" ColumnName="Accom_Review_Officer" />
+          <ScalarProperty Name="Op_Review_Officer" ColumnName="Op_Review_Officer" />
+          <ScalarProperty Name="Work_Review_Officer" ColumnName="Work_Review_Officer" />
+          <ScalarProperty Name="Avg_Grad_work_Reporting_Officer" ColumnName="Avg_Grad_work_Reporting_Officer" />
+          <ScalarProperty Name="Accom_Reporting_Officer" ColumnName="Accom_Reporting_Officer" />
+          <ScalarProperty Name="Op_Reporting_Officer" ColumnName="Op_Reporting_Officer" />
+          <ScalarProperty Name="Work_Reporting_Officer" ColumnName="Work_Reporting_Officer" />
+          <ScalarProperty Name="Rating_On_Efficiency" ColumnName="Rating_On_Efficiency" />
+          <ScalarProperty Name="Skill_upgra_Center" ColumnName="Skill_upgra_Center" />
+          <ScalarProperty Name="FailureInwork_Details" ColumnName="FailureInwork_Details" />
+          <ScalarProperty Name="Work_Self_assess_Report" ColumnName="Work_Self_assess_Report" />
+          <ScalarProperty Name="Agree_Self_assess" ColumnName="Agree_Self_assess" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Section4">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Section4">
+        <MappingFragment StoreEntitySet="Tbl_Section4">
+          <ScalarProperty Name="Overall_graduation" ColumnName="Overall_graduation" />
+          <ScalarProperty Name="Overall_assessment_officer" ColumnName="Overall_assessment_officer" />
+          <ScalarProperty Name="Diff_opinion" ColumnName="Diff_opinion" />
+          <ScalarProperty Name="Agree_assessment_sect3" ColumnName="Agree_assessment_sect3" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Login">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Login">
+        <MappingFragment StoreEntitySet="Tbl_Login">
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Confirm_Password" ColumnName="Confirm_Password" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Section">
+      <EntityTypeMapping TypeName="Db_AsthapanaModel.Tbl_Section">
+        <MappingFragment StoreEntitySet="Tbl_Section">
+          <ScalarProperty Name="Overall_graduationFourSec" ColumnName="Overall_graduationFourSec" />
+          <ScalarProperty Name="Overall_assessment_officerFourSec" ColumnName="Overall_assessment_officerFourSec" />
+          <ScalarProperty Name="Diff_opinion" ColumnName="Diff_opinion" />
+          <ScalarProperty Name="Agree_assessment_sect3" ColumnName="Agree_assessment_sect3" />
+          <ScalarProperty Name="Overall_Graduation" ColumnName="Overall_Graduation" />
+          <ScalarProperty Name="State_of_Mind" ColumnName="State_of_Mind" />
+          <ScalarProperty Name="Strength_atti_to_abnormal_person" ColumnName="Strength_atti_to_abnormal_person" />
+          <ScalarProperty Name="Overall_Assessment_Officer" ColumnName="Overall_Assessment_Officer" />
+          <ScalarProperty Name="Remark_Character_Integrity" ColumnName="Remark_Character_Integrity" />
+          <ScalarProperty Name="Avg_Grade_Work_Effi_Review_Officer" ColumnName="Avg_Grade_Work_Effi_Review_Officer" />
+          <ScalarProperty Name="Co_Ordinate_Agencies_Review_Officer" ColumnName="Co-Ordinate_Agencies_Review_Officer" />
+          <ScalarProperty Name="Initiative_Review_Officer" ColumnName="Initiative_Review_Officer" />
+          <ScalarProperty Name="Decision_Ability_Review_Officer" ColumnName="Decision_Ability_Review_Officer" />
+          <ScalarProperty Name="Strategic_Planning_Ability_Review_Officer" ColumnName="Strategic_Planning_Ability_Review_Officer" />
+          <ScalarProperty Name="Knowldge_Skill_Review_Officer" ColumnName="Knowldge_Skill_Review_Officer" />
+          <ScalarProperty Name="Avg_Grade_Work_Effi_Repo_Officer" ColumnName="Avg_Grade_Work_Effi_Repo_Officer" />
+          <ScalarProperty Name="Co_Ordinate_Agencies_Repo_Officer" ColumnName="Co-Ordinate_Agencies_Repo_Officer" />
+          <ScalarProperty Name="Initiative_Repo_Officer" ColumnName="Initiative_Repo_Officer" />
+          <ScalarProperty Name="Decision_Ability_Repo_Officer" ColumnName="Decision_Ability_Repo_Officer" />
+          <ScalarProperty Name="Strategic_Planning_Ability_Repo_Officer" ColumnName="Strategic_Planning_Ability_Repo_Officer" />
+          <ScalarProperty Name="Knowldge_Skill_Repo_Officer" ColumnName="Knowldge_Skill_Repo_Officer" />
+          <ScalarProperty Name="Avg_Gradation_Person_Attri_Review_Officer" ColumnName="Avg_Gradation_Person_Attri_Review_Officer" />
+          <ScalarProperty Name="CapacityOf_Work_Review_Officer" ColumnName="CapacityOf_Work_Review_Officer" />
+          <ScalarProperty Name="Commu_Skills_Review_Officer" ColumnName="Commu_Skills_Review_Officer" />
+          <ScalarProperty Name="Emotional_Stability_Review_Officer" ColumnName="Emotional_Stability_Review_Officer" />
+          <ScalarProperty Name="Bearing_Person_Review_Officer" ColumnName="Bearing_Person_Review_Officer" />
+          <ScalarProperty Name="Sence_Respo_Review_Officer" ColumnName="Sence_Respo_Review_Officer" />
+          <ScalarProperty Name="Atti_Work_Review_Officer" ColumnName="Atti_Work_Review_Officer" />
+          <ScalarProperty Name="Avg_Gradation_Person_Attri_Repo_Officer" ColumnName="Avg_Gradation_Person_Attri_Repo_Officer" />
+          <ScalarProperty Name="CapacityOf_Work_Repo_Officer" ColumnName="CapacityOf_Work_Repo_Officer" />
+          <ScalarProperty Name="Commu_Skills_Repo_Officer" ColumnName="Commu_Skills_Repo_Officer" />
+          <ScalarProperty Name="Emotional_Stability_Repo_Officer" ColumnName="Emotional_Stability_Repo_Officer" />
+          <ScalarProperty Name="Bearing_Person_Repo_Officer" ColumnName="Bearing_Person_Repo_Officer" />
+          <ScalarProperty Name="Sence_Respo_Repo_Officer" ColumnName="Sence_Respo_Repo_Officer" />
+          <ScalarProperty Name="Atti_Work_Repo_Officer" ColumnName="Atti_Work_Repo_Officer" />
+          <ScalarProperty Name="Avg_Grad_work_Review_Officer" ColumnName="Avg_Grad_work_Review_Officer" />
+          <ScalarProperty Name="Accom_Review_Officer" ColumnName="Accom_Review_Officer" />
+          <ScalarProperty Name="Op_Review_Officer" ColumnName="Op_Review_Officer" />
+          <ScalarProperty Name="Work_Review_Officer" ColumnName="Work_Review_Officer" />
+          <ScalarProperty Name="Avg_Grad_work_Reporting_Officer" ColumnName="Avg_Grad_work_Reporting_Officer" />
+          <ScalarProperty Name="Accom_Reporting_Officer" ColumnName="Accom_Reporting_Officer" />
+          <ScalarProperty Name="Op_Reporting_Officer" ColumnName="Op_Reporting_Officer" />
+          <ScalarProperty Name="Work_Reporting_Officer" ColumnName="Work_Reporting_Officer" />
+          <ScalarProperty Name="Rating_On_Efficiency" ColumnName="Rating_On_Efficiency" />
+          <ScalarProperty Name="Skill_upgra_Center" ColumnName="Skill_upgra_Center" />
+          <ScalarProperty Name="FailureInwork_Details" ColumnName="FailureInwork_Details" />
+          <ScalarProperty Name="Work_Self_assess_Report" ColumnName="Work_Self_assess_Report" />
+          <ScalarProperty Name="Agree_Self_assess" ColumnName="Agree_Self_assess" />
+          <ScalarProperty Name="Asset_Submit_Status" ColumnName="Asset_Submit_Status" />
+          <ScalarProperty Name="Area_Requi_Train" ColumnName="Area_Requi_Train" />
+          <ScalarProperty Name="Diffi_In_Targets" ColumnName="Diffi_In_Targets" />
+          <ScalarProperty Name="WorksInWork" ColumnName="WorksInWork" />
+          <ScalarProperty Name="AllocatedTask" ColumnName="AllocatedTask" />
+          <ScalarProperty Name="TaskDuringPost" ColumnName="TaskDuringPost" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="DateOfFillingAssets" ColumnName="DateOfFillingAssets" />
+          <ScalarProperty Name="TrainingSubject" ColumnName="TrainingSubject" />
+          <ScalarProperty Name="TrainingInstitute" ColumnName="TrainingInstitute" />
+          <ScalarProperty Name="TrainingTo" ColumnName="TrainingTo" />
+          <ScalarProperty Name="TrainingFrom" ColumnName="TrainingFrom" />
+          <ScalarProperty Name="UnAuthAbsenceRemark" ColumnName="UnAuthAbsenceRemark" />
+          <ScalarProperty Name="UnAuthAbsenceType" ColumnName="UnAuthAbsenceType" />
+          <ScalarProperty Name="UnAuthAbsencePeriod" ColumnName="UnAuthAbsencePeriod" />
+          <ScalarProperty Name="LeaveRemark" ColumnName="LeaveRemark" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="LeavePeriod" ColumnName="LeavePeriod" />
+          <ScalarProperty Name="ReviewingOfficerPeriod" ColumnName="ReviewingOfficerPeriod" />
+          <ScalarProperty Name="ReviewingOfficerDesign" ColumnName="ReviewingOfficerDesign" />
+          <ScalarProperty Name="ReviewingOfficerName" ColumnName="ReviewingOfficerName" />
+          <ScalarProperty Name="ReportingOfficerPeriod" ColumnName="ReportingOfficerPeriod" />
+          <ScalarProperty Name="ReportingOfficerDesign" ColumnName="ReportingOfficerDesign" />
+          <ScalarProperty Name="ReportingOfficerName" ColumnName="ReportingOfficerName" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Appointment_Date" ColumnName="Appointment_Date" />
+          <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+          <ScalarProperty Name="Date_Of_Birth" ColumnName="Date_Of_Birth" />
+          <ScalarProperty Name="Cadre" ColumnName="Cadre" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login_ID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

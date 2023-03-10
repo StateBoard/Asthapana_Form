@@ -1,0 +1,181 @@
+﻿@model AastapanaForm_Application.Models.Tbl_Section2
+@{
+    ViewBag.Title = "Section2";
+    Layout = "~/Views/Shared/DashBoard_Layout.cshtml";
+}
+
+<form id="submit_form">
+
+
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 2
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">आस्थापना शाखेने भरावयाची माहिती To Be Filled in by establishment section</div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        1) धारण केलेल्या पदावरून करणे अपेक्षित असलेल्या कामाचे थोडक्यात विवरण.<br />
+                        Brief description of task  required to be performed while holding the post ( 50 शब्द )
+                        :
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="TaskDuringPost" name="TaskDuringPost" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+            <br /><br />
+
+            @*<div class="col-md-1"></div>*@
+            <div class="row">
+
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        2) वार्षिक / प्रतिवेदनाच्या कलावधिकारिता नेमून दिलेल्या कामाची उद्दिष्टे ( असल्यास ).<br />
+                        Allocated tasks ( if any ) for the year or period reported upon
+                    </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="AllocatedTask" name="AllocatedTask" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        3) वर्षभरात / सदर कालावधीत पार पाडलेल्या 4-5 महत्वाच्या व उल्लेखनीय कामांचे संक्षिप्त वर्णन .<br />
+                        List 4-5 important and noteworthy works done during the period ( 100 शब्दांत  )
+                    </span><span style="color:Red">*</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="WorksInWork" name="WorksInWork" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        4) जी उद्दिष्टे पूर्ण होऊ शकली नाहीत,त्याकरिता आलेल्या अडचणी.<br />
+                        Difficulties faced in not achieving certain targets
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="Diffi_In_Targets" name="Diffi_In_Targets" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    5) कार्यक्षमता वाढविण्याकरिता स्वत: स आवश्यक वाटते असे प्रशिक्षणाचे क्षेत्र.<br />
+                    Mention areas of required training which you feel necessary for higher efficieny
+                    :
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="Area_Requi_Train" name="Area_Requi_Train" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+            @*<div class="col-md-1"></div>*@
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    6)  मागील वर्षाच्या दिनांक 31 मार्च अखेरचे वार्षिक मालमत्ता विवरणपत्र संबंधित प्राधिकार्‍याकडे सादर केले आहे काय ?        ( सादर केले असल्यास दिनांक ).                                                                                                   होय / नाही
+                    <br /> Whether assets and liabilities statement ऑफ previous year , submitted to concerned authority ?  (date of submission if submitted )                                                                     yes / no
+
+                </div>
+                @Html.HiddenFor(model => model.Id)
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Asset_Submit_Status, "Yes", new { @id = "Yes" }) Yes
+                            </label>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Asset_Submit_Status, "No", new { @id = "No" }) No
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <br /><br />
+            </div>
+
+            <br /><br />
+        </div>
+
+
+
+    </div>
+
+    <center>
+        <input type="button" id="submit_btn" class="btn btn-block btn-primary btn-lg font-weight-bolder auth-form-btn" value="SUBMIT" style="background-color: #3eadcf; width:10%;font-weight:bold">
+    </center>
+
+
+</form>
+
+<script>
+    $(document).ready(function () {
+
+        $("#submit_btn").click(function (e) {
+
+            e.preventDefault();
+            var formdata = new FormData($(submit_form)[0]);
+            $.ajax({
+                url: 'Section2',
+                type: 'Post',
+                datatype: 'json',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function (Data) {
+                    debugger
+                    if (Data.Result) {
+                        Success_Alert(Data.Response);
+                        $("#submit_form")[0].reset();
+                        /*setTimeout(function () { window.location = "../Section/Section3"; }, 4000);*/
+                    } else {
+                        Error_Alert(Data.Response);
+                    }
+                },
+            });
+        });
+
+    });
+</script>

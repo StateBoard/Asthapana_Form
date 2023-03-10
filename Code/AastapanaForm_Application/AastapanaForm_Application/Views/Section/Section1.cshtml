@@ -1,0 +1,1431 @@
+﻿@model AastapanaForm_Application.Models.Tbl_Section
+@{
+    ViewBag.Title = "Section1";
+    Layout = "~/Views/Shared/DashBoard_Layout.cshtml";
+}
+
+
+<form id="submit_form">
+
+
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 1
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+
+        <br /><br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    मूल्यमापन अहवालाचा कालावधी    Appraisal Report For The Period
+                </div>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-lg-2">
+                1) पासून   <br />
+                From
+            </div>
+            @Html.HiddenFor(model => model.Id)
+            <div class="col-lg-3">
+                <input type="date" id="From" name="From" style="width:250px;" />
+                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="col-lg-2">
+                1) पर्यन्त         <br />
+                To
+            </div>
+            <div class="col-lg-3">
+                <input type="date" id="To" name="To" style="width:250px;" />
+                @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+        <br />
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">आस्थापना शाखेने भरावयाची माहिती To Be Filled in by establishment section</div></li>
+        </ul>
+        <br />
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>1)प्रतिवेदन करावयाच्या शासकीय अधिकार्‍याचे / कर्मचार्‍याचे नाव:<br />Name of the officer / employee reported upon</span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Employee_Name, new { @class = "form-control", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Employee_Name, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>2) संवर्ग Cadre </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Cadre, new { @class = "form-control", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Cadre, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    <span>3) जन्म दिनांक date of birth:</span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    <input type="date" id="Date_Of_Birth" name="Date_Of_Birth" style="width:250px;" />
+                    @Html.ValidationMessageFor(model => model.Date_Of_Birth, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>4)  सध्याचे पद present post:</span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Present_Post, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Present_Post, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        5) सध्याच्या पदावर नियुक्तीचा दिनांक<br />
+                        Date of appointment department to present post
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    <input type="date" id="Appointment_Date" name="Appointment_Date" style="width:250px;" />
+                    @Html.ValidationMessageFor(model => model.Appointment_Date, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    <span>
+                        6)प्रशासकीय विभाग / कार्यालय<br />
+                        Administrative department / office
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Department, new { @class = "form-control", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Department, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br /><br />
+        </div>
+
+
+
+
+
+
+
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">प्रतिवेदन अधिकारी व पुनर्विलोकन अधिकारी यांचा तपशील details of reporting and reviewing officers</div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        1) प्रतिवेदन अधिकारी नाव: <br />
+                        Reporting officer Name
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.ReportingOfficerName, new { @class = "form-control", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.ReportingOfficerName, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        2) प्रतिवेदन अधिकारी पदनाम
+                        Reporting officer desingnation
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.ReportingOfficerDesign, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.ReportingOfficerDesign, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    <span>
+                        3) प्रतिवेदन अधिकारी कालावधी<br />
+                        Reporting officer period :
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.ReportingOfficerPeriod, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.ReportingOfficerPeriod, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4)  पुनर्विलोकन अधिकारी नाव<br />
+                        Reviewing officer Name
+                        :
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.ReviewingOfficerName, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.ReviewingOfficerName, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        5) पुनर्विलोकन अधिकारी पदनाम<br />
+                        Reviewing officer desingnation
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.ReviewingOfficerDesign, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.ReviewingOfficerDesign, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    <span>
+                        6) पुनर्विलोकन अधिकारी कालावधी<br />
+                        Reviewing officer period
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.ReviewingOfficerPeriod, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.ReviewingOfficerPeriod, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br /><br />
+        </div>
+
+        <br />
+
+
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">प्रतिवेदन काळातील रजा आणि इतर अनुउपस्थितीचा तपशील details of leave and absence due to other reasons during under report </div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        1) रजा कालावधी  <br />
+                        leave period
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.LeavePeriod, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.LeavePeriod, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        2)  रजा प्रकार   <br />
+                        leave type
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.LeaveType, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.LeaveType, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    <span>
+                        3)  रजा शेरा    <br />
+                        leave remarks
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.LeaveRemark, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.LeaveRemark, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4)  इतर कारणे ( विशद करा ) जसे की , विनापरवानगी गैरहजेरी/फरार कालावधी <br />
+                        other reasons for unauthorized absence period
+                        :
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.UnAuthAbsencePeriod, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.UnAuthAbsencePeriod, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        5)  इतर कारणे ( विशद करा ) जसे की , विनापरवानगी गैरहजेरी/फरार प्रकार <br />
+                        other reasons for unauthorized absence type
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.UnAuthAbsenceType, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.UnAuthAbsenceType, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    <span>
+                        6)  इतर कारणे ( विशद करा ) जसे की , विनापरवानगी गैरहजेरी/फरार शेरा <br />
+                        other reasons for unauthorized absence remarks
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.UnAuthAbsenceRemark, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.UnAuthAbsenceRemark, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br /><br />
+        </div>
+        <br />
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">प्रतिवेदन काळात घेतलेल्या प्रशिक्षणाचा तपशील details of training undergone during period under report  </div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        1)कालावधी पासून
+                        period form
+
+
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    <input type="date" id="TrainingFrom" name="TrainingFrom" style="width:250px;" />
+                    @Html.ValidationMessageFor(model => model.TrainingFrom, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        2) कालावधी पर्यन्त
+                        period to
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    <input type="date" id="TrainingTo" name="TrainingTo" style="width:250px;" />
+                    @Html.ValidationMessageFor(model => model.TrainingTo, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    <span>
+                        3)  संस्था
+                        Institute
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.TrainingInstitute, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.TrainingInstitute, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4) विषय
+                        Subject
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.TrainingSubject, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.TrainingSubject, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+
+
+        </div>
+        <br />
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold"> मागील वर्षाच्या दिनांक 31 मार्च अखेरचे वार्षिक विवरणपत्र संबंधित प्राधिकार्‍याकडे सादर केल्याचा दिनांक date of filing assets and liabilities statement of previous year to concerned authority  </div></li>
+        </ul>
+        <br /> <span style="margin-left:55px"> </span>
+        <input type="date" id="DateOfFillingAssets" name="DateOfFillingAssets" style="width:250px;" />
+
+
+
+        <br /><br /><br />
+
+
+
+
+
+
+        @*<center>
+            <input type="button" id="submit_btn" class="btn btn-block btn-primary btn-lg font-weight-bolder auth-form-btn" value="SUBMIT" style="background-color: #3eadcf;font-weight:bold; width:10%">
+        </center>*@
+    </div>
+
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 2
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">आस्थापना शाखेने भरावयाची माहिती To Be Filled in by establishment section</div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        1) धारण केलेल्या पदावरून करणे अपेक्षित असलेल्या कामाचे थोडक्यात विवरण.<br />
+                        Brief description of task  required to be performed while holding the post ( 50 शब्द )
+                        :
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="TaskDuringPost" name="TaskDuringPost" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+            <br /><br />
+
+            @*<div class="col-md-1"></div>*@
+            <div class="row">
+
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        2) वार्षिक / प्रतिवेदनाच्या कलावधिकारिता नेमून दिलेल्या कामाची उद्दिष्टे ( असल्यास ).<br />
+                        Allocated tasks ( if any ) for the year or period reported upon
+                    </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="AllocatedTask" name="AllocatedTask" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        3) वर्षभरात / सदर कालावधीत पार पाडलेल्या 4-5 महत्वाच्या व उल्लेखनीय कामांचे संक्षिप्त वर्णन .<br />
+                        List 4-5 important and noteworthy works done during the period ( 100 शब्दांत  )
+                    </span><span style="color:Red">*</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="WorksInWork" name="WorksInWork" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        4) जी उद्दिष्टे पूर्ण होऊ शकली नाहीत,त्याकरिता आलेल्या अडचणी.<br />
+                        Difficulties faced in not achieving certain targets
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="Diffi_In_Targets" name="Diffi_In_Targets" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    5) कार्यक्षमता वाढविण्याकरिता स्वत: स आवश्यक वाटते असे प्रशिक्षणाचे क्षेत्र.<br />
+                    Mention areas of required training which you feel necessary for higher efficieny
+                    :
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-10">
+                    <textarea id="Area_Requi_Train" name="Area_Requi_Train" rows="4" cols="50" style="width:700px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+            @*<div class="col-md-1"></div>*@
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    6)  मागील वर्षाच्या दिनांक 31 मार्च अखेरचे वार्षिक मालमत्ता विवरणपत्र संबंधित प्राधिकार्‍याकडे सादर केले आहे काय ?        ( सादर केले असल्यास दिनांक ).                                                                                                   होय / नाही
+                    <br /> Whether assets and liabilities statement ऑफ previous year , submitted to concerned authority ?  (date of submission if submitted )                                                                     yes / no
+
+                </div>
+                @Html.HiddenFor(model => model.Id)
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Asset_Submit_Status, "Yes", new { @id = "Yes" }) Yes
+                            </label>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Asset_Submit_Status, "No", new { @id = "No" }) No
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <br /><br />
+            </div>
+
+            <br /><br />
+        </div>
+
+
+
+    </div>
+
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 3
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+        <br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    प्रतिवेदन अधिकार्‍याने लिहावयाचा मूल्यमापन अहवाल
+                    Performance appraisal report prepared by reporting officer
+                </div>
+            </li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            @Html.HiddenFor(model => model.Id)
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    1) भाग – 2 मध्ये नमूद करण्यात आलेल्या स्वयंमूल्यननिर्धारण   अहवालाशी आपण सहमत आहात काय ? नसल्यास,वस्तुस्थितीदर्शक अभिप्राय द्यावेत.:<br />
+                    Whether you agree with self- assessment recorded in part – 2 ? if not, then state factual position.
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Agree_Self_assess, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Agree_Self_assess, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                <div class="col-lg-5">
+                    2)प्रतिवेदन कालावधीत पार पडलेल्या महत्वपूर्ण व उल्लेखनीय कामासंदर्भात आपले स्पष्ट अभिप्राय द्यावेत.<br />
+                    Officer your remarks on important and noteworthy works mentioned in self-assessment report.
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Work_Self_assess_Report, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Work_Self_assess_Report, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    3) प्रतिवेदित अधिकारी / कर्मचारी यांचे त्यांच्या कामाच्या संदर्भात लक्षणीय अपयश निदर्शनास आले असल्यास, द्यावेत.<br />
+                    Has the officer/ employee reported upon with significant failures is respect of his work ,if yes please furnish factual details .
+
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.FailureInwork_Details, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.FailureInwork_Details, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                <div class="col-lg-5">
+                    4)संबंधित अधिकार्‍यांनी / कर्मचार्‍यांनी कार्यक्षमता वाढविण्याकरिता आवश्यक असलेल्या प्रशिक्षणाचे क्षेत्रास सहमत आहात  काय ?.<br />
+                    Do you with the skill up- gradation needs as identified by the officer ?
+
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Skill_upgra_Center, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Skill_upgra_Center, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                <div class="col-lg-5">
+                    5)अधिकारी / कर्मचारी यांची कार्यपूर्तता,कार्यक्षमता व वैयक्तिक गुणवैशिष्ट्ये याबाबतचे गुणांकन. <br />( 1- 10 या मर्यादित  गुणांकन देण्यात यावे . )<br />
+                    Gradation on works completed , efficiency and personal attributes by officers / employees
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Rating_On_Efficiency, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Rating_On_Efficiency, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+        </div>
+
+
+
+
+
+
+
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">( अ ) कार्यपूर्तता work completion ( weightage 40 % ) </div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        1)प्रतिवेदन अधिकारी साठी उद्दिष्टांनुसार नेमून दिलेल्या कार्याची पूर्तता<br />
+                        For Reporting officer Accomplishment of planned work
+
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Work_Reporting_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Work_Reporting_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        2)प्रतिवेदन अधिकारी साठी केलेल्या कामाचा दर्जा<br />
+                        For Reporting officer Quality of output
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Op_Reporting_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Op_Reporting_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    <span>
+                        3)प्रतिवेदन अधिकारी साठी केलेली उल्लेखनीय / वैशिष्ट्यपूर्ण कामे<br />
+                        For Reporting officer Accomplishment of exceptional work/ unforeseen tasks performed
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Accom_Reporting_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Accom_Reporting_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4)प्रतिवेदन अधिकारी साठी  कार्यपूर्तता य घटकाचे सरासरी गुणांकन<br />
+                        For Reporting officer Average gradation on work completion
+
+                        :
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Avg_Grad_work_Reporting_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Avg_Grad_work_Reporting_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-3">
+                    <span>
+                        5)पुनर्विलोकन  अधिकारी साठी उद्दिष्टांनुसार नेमून दिलेल्या कार्याची पूर्तता<br />
+                        For Review officer Accomplishment of planned work
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Work_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Work_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        6)पुनर्विलोकन अधिकारी साठी केलेल्या कामाचा दर्जा<br />
+                        For Review officer Quality of output
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Op_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Op_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-3">
+                    7)पुनर्विलोकन अधिकारी साठी केलेली उल्लेखनीय / वैशिष्ट्यपूर्ण कामे<br />
+                    For Review officer Accomplishment of exceptional work/ unforeseen tasks performed
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Accom_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Accom_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        8)पुनर्विलोकन अधिकारी साठी  कार्यपूर्तता य घटकाचे सरासरी गुणांकन<br />
+                        For Review officer Average gradation on work completion
+
+                        :
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Avg_Grad_work_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Avg_Grad_work_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+
+        </div>
+
+        <br />
+
+
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">( ब ) वैयक्तिक गुणवैशिष्ट्ये personal attributes ( weightage ३० % )  </div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    1) प्रतिवेदन अधिकारी कामाबाबतचा दृष्टीकोण<br />
+                    Attitude to work  of Reporting officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Atti_Work_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Atti_Work_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    1)प्रतिवेदन अधिकारी जबाबदारीची जाणीव
+                    Sense of responsinility of Reporting officer
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Sence_Respo_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Sence_Respo_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        3) सर्वसाधारण वर्तणूक व व्यक्तिमत्व प्रतिवेदन अधिकारी<br />
+                        Overall bearing and personality of  Reporting officer
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Bearing_Person_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Bearing_Person_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4) भावनिक संतुलन प्रतिवेदन अधिकारी<br />
+                        Emotional stability of  Reporting officer
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Emotional_Stability_Repo_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Emotional_Stability_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        5)  प्रतिवेदन अधिकारी संवाद कोशल्य<br />
+                        Communication skills of  Reporting officer
+
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Commu_Skills_Repo_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Commu_Skills_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    <span>
+                        6)प्रतिवेदन अधिकारी  विहित कालमर्यादेत काम करण्याची क्षमता
+                        Capacity to work in time limit of  Reporting officer
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.CapacityOf_Work_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.CapacityOf_Work_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        7)  प्रतिवेदन अधिकारी  वैयक्तिक गुणवैशिष्ट्ये या घटकाचे सरासरी गुणांकन<br />
+                        Average gradation on personal attributes of  Reporting officer
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Avg_Gradation_Person_Attri_Repo_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Avg_Gradation_Person_Attri_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    1) पुनर्विलोकन अधिकारी कामाबाबतचा दृष्टीकोण<br />
+                    Attitude to work  of Review officer
+
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Atti_Work_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Atti_Work_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    2)पुनर्विलोकन अधिकारी जबाबदारीची जाणीव
+                    Sense of responsinility of Review officer
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Sence_Respo_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Sence_Respo_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        3) सर्वसाधारण वर्तणूक व व्यक्तिमत्व पुनर्विलोकन   अधिकारी<br />
+                        Overall bearing and personality of  Review officer
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Bearing_Person_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Bearing_Person_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    <span>
+                        4) भावनिक संतुलन पुनर्विलोकन  अधिकारी<br />
+                        Emotional stability of  Review officer
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Emotional_Stability_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Emotional_Stability_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        5)  पुनर्विलोकन अधिकारी संवाद कोशल्य<br />
+                        Communication skills of  Review officer
+
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Commu_Skills_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Commu_Skills_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    <span>
+                        6)पुनर्विलोकन अधिकारी  विहित कालमर्यादेत काम करण्याची क्षमता
+                        Capacity to work in time limit of  Review officer
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.CapacityOf_Work_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.CapacityOf_Work_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+                    <span>
+                        7)  पुनर्विलोकन अधिकारी  वैयक्तिक गुणवैशिष्ट्ये या घटकाचे सरासरी गुणांकन<br />
+                        Average gradation on personal attributes of  Review officer
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Avg_Gradation_Person_Attri_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Avg_Gradation_Person_Attri_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+            <br /><br />
+
+        </div>
+        <br />
+
+        <br />
+        <ul>
+            <li> <div class="col-md-12" style="font-weight:bold">( क ) कार्यक्षमता efficiency ( weightage 30 % ) </div></li>
+        </ul>
+        <div class="panel panel-default">
+
+            <div style="height:25px;"></div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+
+                    1) प्रतिवेदन अधिकारी संबंधित कायदे, नियम व प्रचलित कार्यपद्धती माहिती तंत्रज्ञान आणि संबंधित क्षेत्रातील स्थानिक पद्धती याबबतचे ज्ञान. <br />
+                    Knowledge of relevant acts / rules / procedures / it skill and awareness of local norms in the relevant area to
+                    Reporting officer
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Knowldge_Skill_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Knowldge_Skill_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+                    2) प्रतिवेदन अधिकारी कौशल्यपूर्ण नियोजनाची  क्षमता
+                    Strategic planning ability of Reporting officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Strategic_Planning_Ability_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Strategic_Planning_Ability_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-2">
+
+                    3)प्रतिवेदन अधिकारी स्वत: निर्णय घेऊन काम करण्याची क्षमता
+                    Decision making ability of Reporting officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Decision_Ability_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Decision_Ability_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+
+                    4)प्रतिवेदन अधिकारी उपक्रमशीलता
+                    Initiative of Reporting officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Initiative_Repo_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Initiative_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+
+                <div class="col-lg-2">
+
+                    5)आपल्या कामाशी संबंध येणार्‍या इतर शासकीय यंत्रणेशी समन्वय साधण्याची क्षमता प्रतिवेदन अधिकारी<br />
+                    Ability to co- ordinate with other government agencies in relation to work of Reporting officer
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Co_Ordinate_Agencies_Repo_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Co_Ordinate_Agencies_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+
+                    6)प्रतिवेदन अधिकारी कार्यक्षमता या घटकाचे सरासरी गुणांकन
+                    Average gradation of work efficiency of Reporting officer
+
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Avg_Grade_Work_Effi_Repo_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Avg_Grade_Work_Effi_Repo_Officer, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+
+                    1) पुनर्विलोकन  अधिकारीसंबंधित कायदे, नियम व प्रचलित कार्यपद्धती माहिती तंत्रज्ञान आणि संबंधित क्षेत्रातील स्थानिक पद्धती याबबतचे ज्ञान. <br />
+                    Knowledge of relevant acts / rules / procedures / it skill and awareness of local norms in the relevant area to
+                    Review officer
+                </div>
+                <div class="col-lg-3">
+                    @*@Html.EditorFor(model => model.Knowldge_Skill_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Knowldge_Skill_Review_Officer, "", new { @class = "text-danger" })*@
+                    <textarea id="Knowldge_Skill_Review_Officer" name="Knowldge_Skill_Review_Officer" rows="4" cols="2" style="width:200px;border-color:#b9b4b4"></textarea>
+
+                </div>
+                <div class="col-lg-2">
+
+                    2)आपल्या कामाशी संबंध येणार्‍या इतर शासकीय यंत्रणेशी समन्वय साधण्याची क्षमता पुनर्विलोकन अधिकारी<br />
+                    Ability to co-ordinate with other government agencies in relation to work of Review officer
+
+                </div>
+                <div class="col-lg-3">
+                    @*@Html.EditorFor(model => model.Co_Ordinate_Agencies_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Co_Ordinate_Agencies_Review_Officer, "", new { @class = "text-danger" })*@
+                    <textarea id="Co_Ordinate_Agencies_Review_Officer" name="Co_Ordinate_Agencies_Review_Officer" rows="4" cols="2" style="width:200px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                @*<div class="col-md-1"></div>*@
+                <div class="col-lg-2">
+                    3) पुनर्विलोकन अधिकारी कौशल्यपूर्ण नियोजनाची  क्षमता
+                    Strategic planning ability of Review officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Strategic_Planning_Ability_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Strategic_Planning_Ability_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="col-lg-2">
+
+                    4)पुनर्विलोकन अधिकारी स्वत: निर्णय घेऊन काम करण्याची क्षमता
+                    Decision making ability of Review officer
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Decision_Ability_Review_Officer, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Decision_Ability_Review_Officer, "", new { @class = "text-danger" })
+
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-2">
+
+                    5)पुनर्विलोकन अधिकारी उपक्रमशीलता
+                    Initiative of Review officer
+                </div>
+                <div class="col-lg-3">
+                    @*@Html.TextBoxFor(model => model.Initiative_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                        @Html.ValidationMessageFor(model => model.Initiative_Review_Officer, "", new { @class = "text-danger" })*@
+                    <textarea id="Initiative_Review_Officer" name="Initiative_Review_Officer" rows="4" cols="2" style="width:200px;border-color:#b9b4b4"></textarea>
+                </div>
+                <div class="col-lg-2">
+
+                    6)पुनर्विलोकन अधिकारी कार्यक्षमता या घटकाचे सरासरी गुणांकन
+                    Average gradation of work efficiency of Review officer
+
+                </div>
+                <div class="col-lg-3">
+                    @*@Html.TextBoxFor(model => model.Avg_Grade_Work_Effi_Review_Officer, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                        @Html.ValidationMessageFor(model => model.Avg_Grade_Work_Effi_Review_Officer, "", new { @class = "text-danger" })*@
+                    <textarea id="Avg_Grade_Work_Effi_Review_Officer" name="Avg_Grade_Work_Effi_Review_Officer" rows="4" cols="2" style="width:200px;border-color:#b9b4b4"></textarea>
+
+                </div>
+            </div>
+            <br /><br />
+
+        </div>
+        <br />
+        <br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    संबंधित अधिकारी /कर्मचार्‍याच्या सचोटी व चारित्र्याबाबत आपले स्वयंस्पष्ट अभिप्राय द्यावेत. ( प्रतिकूल अभिप्राय असल्यास , सोबत त्याबाबतची उदाहरणे नमूद करावीत.)<br />
+                    Offer your remarks on character and integrity ( if remarks are negative , then mention instances )
+                </div>
+            </li>
+        </ul>
+        <br /> <span style="margin-left:55px"> </span>
+        <div class="col-lg-5">
+            @Html.TextBoxFor(model => model.Remark_Character_Integrity, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+            @Html.ValidationMessageFor(model => model.Remark_Character_Integrity, "", new { @class = "text-danger" })
+
+        </div>
+
+
+        <br /><br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    अधिकारी/ कर्मचार्री यांचे एकंदरीत मूल्यमापन ( जास्तीत जास्त 100 शब्द )<br />
+                    Overall assessment of officer / employee ( maximum 100 words )
+                    Include strengths and lesser strengths and his attitude towards disabled persons , women and backward classes.
+
+                </div>
+                @Html.TextBoxFor(model => model.Overall_Assessment_Officer, new { @class = "form-control", @required = "required" })
+                @Html.ValidationMessageFor(model => model.Overall_Assessment_Officer, "", new { @class = "text-danger" })
+            </li>
+        </ul>
+        <br /> <span style="margin-left:55px"> </span>
+
+
+        <br />
+        <br /><br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    प्रकृतिमान   (उत्कृष्ट/चांगले/चांगले नाही)
+                    state of health ( very good / good / not good )
+                </div>
+            </li>
+        </ul>
+        <br /> <span style="margin-left:55px"> </span>
+        <div class="col-lg-5">
+
+
+            @Html.DropDownListFor(model => model.State_of_Mind, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "उत्कृष्ट ", Value = "उत्कृष्ट"},
+            new SelectListItem { Text = "चांगले ", Value = "चांगले"},
+            new SelectListItem { Text = "चांगले नाही", Value = "चांगले नाही"},
+
+           }, "-Select State of Mind  -", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+        </div>
+
+        <br /><br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    . एकंदरीत गुणांकन.<br /> Overall gradation
+                </div>
+            </li>
+        </ul>
+        <br /> <span style="margin-left:55px"> </span>
+        <div class="col-lg-5">
+            @Html.DropDownListFor(model => model.Overall_Graduation, new List<SelectListItem>
+                   {
+                   new SelectListItem { Text = "1 ", Value = "1"},
+                   new SelectListItem { Text = "2 ", Value = "2"},
+                   new SelectListItem { Text = "3", Value = "3"},
+                   new SelectListItem { Text ="4", Value ="4"},
+                   new SelectListItem { Text = "5", Value = "5"},
+
+                  }, "-Select Overall Gradation -", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+
+        </div>
+        <br /><br /><br />
+        @*<center>
+            <input type="button" id="submit_btn" class="btn btn-block btn-primary btn-lg font-weight-bolder auth-form-btn" value="SUBMIT" style="background-color: #3eadcf;font-weight:bold; width:15%">
+        </center>*@
+    </div>
+
+    <div class="container embed-responsive-item" style="margin-left:-10px">
+        <div class="row" style="font-size: medium; font-weight: bold; text-align: center; line-height: 30px; padding-top: 10px;">
+            Section 4
+        </div>
+        <br />
+        <div class="row" style="border:inset 2px  #3eadcf"></div>
+        <br />
+        <ul>
+            <li>
+                <div class="col-md-12" style="font-weight:bold">
+                    पुनर्विलोकन  अधिकार्‍याचे  अभिप्राय remarks of reviewing officer
+                </div>
+            </li>
+        </ul>
+        <div class="panel panel-default">
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+
+                    1)  आपण प्रतिवेदन अधिकार्‍याने, संबंधित अधिकारी /कर्मचार्‍याच्या कार्यपूर्तता, कार्यक्षमता, वैयक्तिक गुणवैशिष्ट्ये यासंबंधाने भाग – 3 मधील मुद्यांच्या साह्याने केलेल्या मूल्यनिर्धारणाशी सहमत आहात काय ?
+                    Do you agree with assessment of reporting officer on work don, efficiency ,personal attributes in part – 3 concerned officer / employee ?
+                    yes / no
+
+                </div>
+                @Html.HiddenFor(model => model.Id)
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Agree_assessment_sect3, "Yes", new { @id = "Yes" }) Yes
+                            </label>
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.Agree_assessment_sect3, "No", new { @id = "No" }) No
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        2) सहमत नसल्यास,तपशील व कारने द्यावीत.<br />
+                        In case of difference of opiनिon details and reasons for the same may be given
+
+                        :
+                    </span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.TextBoxFor(model => model.Diff_opinion, new { @class = "form-control", @name = "First_Name ", @id = "First_Name", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Diff_opinion, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            @*<div class="col-md-1"></div>*@
+           
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        3) अधिकारी/ कर्मचार्री यांचे एकंदरीत मूल्यमापन ( जास्तीत जास्त 100 शब्द )
+                        यामध्ये संबंधित अधिकारी / कर्मचार्‍यांची बलस्थाने , उणिवा  आणि दिव्यांग व्यक्ति , महिला व मागासवर्गीयांबाबतचा दृश्ठिकोण यांचा समावेश असावा.
+                        Overall assessment of officer / employee ( maximum 100 words )
+                        Include strengths and lesser strengths and his attitude towards disabled persons , women अँड backward क्लाससेस.
+
+                    </span><span style="color:Red">*</span>
+                </div>
+                <div class="col-lg-3">
+                    @Html.EditorFor(model => model.Overall_assessment_officerFourSec, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Overall_assessment_officerFourSec, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-lg-5">
+                    <span>
+                        4) एकंदरीत गुणांकन
+                        ( 1- 10 या मर्यादित गुणांकन देण्यात यावे . )
+                        Overall gradation
+                    </span>
+                </div>
+                <div class="col-lg-5">
+                    @Html.DropDownListFor(model => model.Overall_graduationFourSec, new List<SelectListItem>
+                           {
+                           new SelectListItem { Text = "1 ", Value = "1"},
+                           new SelectListItem { Text = "2 ", Value = "2"},
+                           new SelectListItem { Text = "3", Value = "3"},
+                           new SelectListItem { Text ="4", Value ="4"},
+                           new SelectListItem { Text = "5", Value = "5"},
+                            new SelectListItem { Text = " 6 ", Value = " 6 "},
+                           new SelectListItem { Text = "  7 ", Value = " 7 "},
+                           new SelectListItem { Text = "  8 ", Value = " 8 "},
+                           new SelectListItem { Text ="   9 ", Value ="  9 "},
+                           new SelectListItem { Text = "  10 ", Value = " 10 "},
+
+                          }, "-Select Overall Gradation -", new { @class = "btn btn-default dropdown-toggle", @style = "width:210px" })
+
+                </div>
+            </div>
+            <br />
+            <br /><br /><br />
+            <center>
+                <input type="button" id="submit_btn" class="btn btn-block btn-primary btn-lg font-weight-bolder auth-form-btn" value="SUBMIT" style="background-color: #3eadcf;font-weight:bold; width:15%">
+            </center>
+        </div>
+
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+
+        $("#submit_btn").click(function (e) {
+
+            e.preventDefault();
+            var formdata = new FormData($(submit_form)[0]);
+            $.ajax({
+                url: 'Section1',
+                type: 'Post',
+                datatype: 'json',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function (Data) {
+                    
+                    if (Data.Result) {
+                        debugger
+                        Success_Alert(Data.Response);
+                        $("#submit_form")[0].reset();
+                        /*setTimeout(function () { window.location = "../Section/Section2"; }, 4000);*/
+                    
+                    }
+                    else {
+                        Error_Alert(Data.Response);
+                    }
+
+
+                },
+            });
+        });
+
+    });
+</script>
